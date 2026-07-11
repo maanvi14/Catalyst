@@ -43,9 +43,15 @@ def update_job_activity(job_name: str, health: str = "healthy"):
         pass
 
 
-@router.get("/health", response_model=HealthResponse)
-def health_check() -> HealthResponse:
-    return HealthResponse(status="ok", service=settings.app_name, environment=settings.app_env)
+@router.get("/health")
+def health_check():
+    return {
+        "status": "ok", 
+        "service": settings.app_name, 
+        "environment": settings.app_env,
+        "cors_origins": settings.cors_origins,
+        "cors_origin_list": settings.cors_origin_list
+    }
 
 
 @router.get("/processes")
