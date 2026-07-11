@@ -9,7 +9,12 @@ def configure_cors(app: FastAPI) -> None:
     origins = []
     origin_regexes = []
     
-    for origin in settings.cors_origin_list:
+    # Fallback to allow vercel.app and localhost if configuration is empty
+    cors_list = settings.cors_origin_list
+    if not cors_list or cors_list == [""]:
+        cors_list = ["https://*.vercel.app", "http://localhost:5173", "http://localhost:3000"]
+    
+    for origin in cors_list:
         if "*" in origin:
             # Convert glob wildcard (e.g. *.vercel.app) to regex
             pattern = re.escape(origin).replace(r"\*", ".*")
