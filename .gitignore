@@ -1,0 +1,42 @@
+# Node / Next.js
+node_modules/
+.next/
+out/
+build/
+dist/
+
+# Python virtual envs & caches
+.venv/
+.venv*/
+venv/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Local Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Databases & local logs
+*.db
+*.sqlite
+*.log
+output.txt
+backend/app/database/process_health.json
+backend/app/database/audit_logs.json
+backend/app/database/traces_history.json
+backend/app/database/env_definitions.json
+backend/backend/
+
+# IDE / System
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

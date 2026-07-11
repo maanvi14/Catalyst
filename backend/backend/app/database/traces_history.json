@@ -1,0 +1,46 @@
+{
+  "RUN-48213": {
+    "run_id": "RUN-48213",
+    "agent_gid": "AG-SHIP-RETENDER",
+    "shipment_gid": "NWL.SH10293",
+    "status": "Failed \u00b7 CARRIER_TIMEOUT",
+    "steps": [
+      {
+        "title": "Trigger received",
+        "detail": "evt=TENDER_DECLINED, SHIPMENT_GID=NWL.SH10293",
+        "duration": "12ms",
+        "status": "ok"
+      },
+      {
+        "title": "Load shipment context",
+        "detail": "in: SHIPMENT_GID=NWL.SH10293 \u2192 out: status=DECLINED, retry_count=1",
+        "duration": "86ms",
+        "status": "ok"
+      },
+      {
+        "title": "Evaluate guard conditions",
+        "detail": "retry_count(1) < 3 \u2713, alt_carrier_exists \u2713",
+        "duration": "22ms",
+        "status": "ok"
+      },
+      {
+        "title": "Select next carrier",
+        "detail": "out: CARRIER_GID=NWL.CARR.SWIFT (Swift Freight)",
+        "duration": "41ms",
+        "status": "ok"
+      },
+      {
+        "title": "Build tender payload",
+        "detail": "out: payload 2.1KB \u00b7 rate=$1,842.00 \u00b7 service=LTL",
+        "duration": "33ms",
+        "status": "ok"
+      },
+      {
+        "title": "POST tender \u2014 carrier API",
+        "detail": "ERROR: CARRIER_TIMEOUT after 30000ms",
+        "duration": "30.0s",
+        "status": "failed"
+      }
+    ]
+  }
+}

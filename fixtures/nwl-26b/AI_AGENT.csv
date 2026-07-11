@@ -1,0 +1,4 @@
+AGENT_GID,AGENT_XID,DOMAIN_GID,AGENT_NAME,VISIBILITY,TRIGGER_EVENT,DEFINITION_DETAIL
+NWL.SHIPMENT_ANOMALY_AI,SHIPMENT_ANOMALY_AI,NWL,Shipment Anomaly Detection AI,full,SHIPMENT - CREATED,"Oracle AI agent for detecting shipment anomalies using ML models. Analyzes historical patterns, weather data, and carrier performance to flag at-risk shipments before they fail."
+NWL.PREDICTIVE_ETA_AI,PREDICTIVE_ETA_AI,NWL,Predictive ETA AI,limited,SHIPMENT - TENDERED,"Limited visibility: trigger context only. Full ML model logic not exposed by OTM 26B. Uses external traffic and weather APIs for prediction."
+NWL.AI_RATE_OPTIMIZER,AI_RATE_OPTIMIZER,NWL,AI Rate Optimizer,full,SHIPMENT - TENDER,"Collides with AUTO_TENDER_CARRIER on same event — THE DELIBERATE CONFLICT. Uses reinforcement learning to optimize carrier selection and rate negotiation in real-time."

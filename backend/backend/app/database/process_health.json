@@ -1,0 +1,66 @@
+[
+  {
+    "job_name": "Nightly Tender Sweep",
+    "schedule": "0 2 * * *",
+    "last_run": "Today 02:00",
+    "duration": "4m 12s",
+    "trend": "\u25b2",
+    "health": "healthy"
+  },
+  {
+    "job_name": "Invoice Tolerance Batch",
+    "schedule": "0 */4 * * *",
+    "last_run": "Today 04:00",
+    "duration": "1m 38s",
+    "trend": "\u2014",
+    "health": "healthy"
+  },
+  {
+    "job_name": "Credit Hold Reconcile",
+    "schedule": "0 */6 * * *",
+    "last_run": "Today 06:00",
+    "duration": "2m 05s",
+    "trend": "\u25bc",
+    "health": "healthy"
+  },
+  {
+    "job_name": "Freight Bill Audit Batch",
+    "schedule": "0 6 * * *",
+    "last_run": "Today 06:00",
+    "duration": "12m 07s",
+    "trend": "\u25b2",
+    "health": "healthy"
+  },
+  {
+    "job_name": "Carrier Rank Model Retrain",
+    "schedule": "0 3 * * 0",
+    "last_run": "Sun 03:00",
+    "duration": "28m 44s",
+    "trend": "\u25b2",
+    "health": "degraded"
+  },
+  {
+    "job_name": "Document Archive",
+    "schedule": "0 23 * * *",
+    "last_run": "Yesterday 23:00",
+    "duration": "8m 44s",
+    "trend": "\u25bc",
+    "health": "degraded"
+  },
+  {
+    "job_name": "Dwell Prediction Model Refresh",
+    "schedule": "0 1 * * *",
+    "last_run": "\u2014missed\u2014",
+    "duration": "\u2014",
+    "trend": "\u2014",
+    "health": "failing"
+  },
+  {
+    "job_name": "Carrier Performance Rollup",
+    "schedule": "0 5 * * 1",
+    "last_run": "Mon 05:00",
+    "duration": "3m 21s",
+    "trend": "\u2014",
+    "health": "healthy"
+  }
+]

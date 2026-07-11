@@ -1,0 +1,4 @@
+DOMAIN_GID,DOMAIN_XID,PARENT_DOMAIN_GID,DESCRIPTION
+NWL,NWL,null,Northwind Logistics Global
+NWL/EU,EU,NWL,Northwind Europe
+NWL/NA,NA,NWL,Northwind North America

@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: catalyst-backend
+    env: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.6
+      - key: APP_ENV
+        value: production
+      - key: API_PREFIX
+        value: /api/v1
+      - key: DATABASE_URL
+        value: sqlite:///./catalyst.db
+      - key: FIXTURE_DIR
+        value: ../fixtures/nwl-26b
+      - key: AUTO_LOAD_FIXTURES
+        value: "true"
+      - key: CORS_ORIGINS
+        value: "https://*.vercel.app"
+      - key: GROQ_API_KEY
+        sync: false

@@ -1,0 +1,77 @@
+@import "reactflow/dist/style.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --rw-neutral-0: #0f172a;
+  --rw-neutral-10: #1e1b4b;
+  --rw-neutral-20: #312e81;
+  --rw-neutral-30: #1e1b4b;
+  --rw-neutral-40: #312e81;
+  --rw-neutral-50: #4338ca;
+  --rw-neutral-60: #6366f1;
+  --rw-brand-primary: #a78bfa;
+  --rw-brand-secondary: #ddd6fe;
+  --rw-slate-primary: #faf5ff;
+  --rw-slate-secondary: #ddd6fe;
+  --rw-slate-tertiary: #c4b5fd;
+  --rw-slate-border: #4338ca;
+  --rw-status-success: #34d399;
+  --rw-status-warning: #fbbf24;
+  --rw-status-error: #f87171;
+  --rw-status-info: #a78bfa;
+  --rw-ai-accent: #8b5cf6;
+
+  /* KSAP Dark Tokens */
+  --color-navy: #16233A;
+  --color-orange: #E8792B;
+  --color-dark-bg: #0B1120;
+  --color-surface: #111827;
+  --color-card: #16233A;
+  --color-border: #1E3A5F;
+  --color-text-primary: #E2E8F0;
+  --color-text-secondary: #94A3B8;
+  --color-text-tertiary: #64748B;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--rw-neutral-30);
+}
+
+body {
+  margin: 0;
+  background: var(--rw-neutral-30);
+  color: var(--rw-slate-primary);
+  font-family: var(--font-geist-sans), Inter, Arial, sans-serif;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--rw-brand-primary);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--rw-neutral-20);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--rw-neutral-50);
+  border-radius: 4px;
+}
+

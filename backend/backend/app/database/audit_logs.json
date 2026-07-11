@@ -1,0 +1,474 @@
+[
+  {
+    "timestamp": "2026-07-11 22:37",
+    "user": "system",
+    "action": "Scan conflicts",
+    "target": "ConflictEngine",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 22:34",
+    "user": "system",
+    "action": "Scan conflicts",
+    "target": "ConflictEngine",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 22:28",
+    "user": "system",
+    "action": "Scan conflicts",
+    "target": "ConflictEngine",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 22:27",
+    "user": "system",
+    "action": "Scan conflicts",
+    "target": "ConflictEngine",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 22:27",
+    "user": "system",
+    "action": "Scan conflicts",
+    "target": "ConflictEngine",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 22:27",
+    "user": "system",
+    "action": "Scan conflicts",
+    "target": "ConflictEngine",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 22:24",
+    "user": "demo_user",
+    "action": "Query LLM (Ask Catalyst)",
+    "target": "What agents trigger on SHIPMENT_CREATED?",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 22:24",
+    "user": "demo_user",
+    "action": "Query LLM (Ask Catalyst)",
+    "target": "What agents trigger on SHIPMENT_PLANNED?",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 22:24",
+    "user": "demo_user",
+    "action": "Query LLM (Ask Catalyst)",
+    "target": "Compare PROD and TEST versions of AG-SHI",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 22:23",
+    "user": "demo_user",
+    "action": "Query LLM (Ask Catalyst)",
+    "target": "Show me all conflicts involving AI agent",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 22:22",
+    "user": "system",
+    "action": "Scan conflicts",
+    "target": "ConflictEngine",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 22:22",
+    "user": "system",
+    "action": "Scan conflicts",
+    "target": "ConflictEngine",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 22:17",
+    "user": "system",
+    "action": "Scan conflicts",
+    "target": "ConflictEngine",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 22:17",
+    "user": "system",
+    "action": "Scan conflicts",
+    "target": "ConflictEngine",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 22:12",
+    "user": "demo_user",
+    "action": "Ask Catalyst [Groq Error]",
+    "target": "Compare PROD and TEST versions of AG-SHI",
+    "environment": "PROD",
+    "result": "ERROR"
+  },
+  {
+    "timestamp": "2026-07-11 22:12",
+    "user": "demo_user",
+    "action": "Query LLM (Ask Catalyst)",
+    "target": "Show me all conflicts involving AI agent",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 22:12",
+    "user": "demo_user",
+    "action": "Query LLM (Ask Catalyst)",
+    "target": "What agents trigger on SHIPMENT_PLANNED?",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 22:12",
+    "user": "demo_user",
+    "action": "Query LLM (Ask Catalyst)",
+    "target": "Why did the Auto-Tender agent fail last ",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 22:12",
+    "user": "demo_user",
+    "action": "Query LLM (Ask Catalyst)",
+    "target": "Compare PROD and TEST versions of AG-SHI",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 22:12",
+    "user": "demo_user",
+    "action": "Query LLM (Ask Catalyst)",
+    "target": "Show me all conflicts involving AI agent",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 22:12",
+    "user": "demo_user",
+    "action": "Query LLM (Ask Catalyst)",
+    "target": "What agents trigger on SHIPMENT_PLANNED?",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 22:12",
+    "user": "demo_user",
+    "action": "Query LLM (Ask Catalyst)",
+    "target": "Why did the Auto-Tender agent fail last ",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 22:11",
+    "user": "system",
+    "action": "Scan conflicts",
+    "target": "ConflictEngine",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 22:11",
+    "user": "system",
+    "action": "Scan conflicts",
+    "target": "ConflictEngine",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 22:11",
+    "user": "system",
+    "action": "Scan conflicts",
+    "target": "ConflictEngine",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 22:06",
+    "user": "system",
+    "action": "Scan conflicts",
+    "target": "ConflictEngine",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 22:06",
+    "user": "system",
+    "action": "Scan conflicts",
+    "target": "ConflictEngine",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 22:04",
+    "user": "system",
+    "action": "Scan conflicts",
+    "target": "ConflictEngine",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 22:04",
+    "user": "system",
+    "action": "Scan conflicts",
+    "target": "ConflictEngine",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 22:04",
+    "user": "demo_user",
+    "action": "Query LLM (Ask Catalyst)",
+    "target": "Why did the Auto-Tender agent fail last ",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 22:02",
+    "user": "demo_user",
+    "action": "Query LLM (Ask Catalyst)",
+    "target": "Compare PROD and TEST versions of AG-SHI",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 22:02",
+    "user": "demo_user",
+    "action": "Query LLM (Ask Catalyst)",
+    "target": "Show me all conflicts involving AI agent",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 22:02",
+    "user": "demo_user",
+    "action": "Query LLM (Ask Catalyst)",
+    "target": "What agents trigger on SHIPMENT_PLANNED?",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 22:02",
+    "user": "demo_user",
+    "action": "Query LLM (Ask Catalyst)",
+    "target": "Why did the Auto-Tender agent fail last ",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 21:54",
+    "user": "demo_user",
+    "action": "Ask Catalyst [Groq Error]",
+    "target": "Compare PROD and TEST versions of AG-SHI",
+    "environment": "PROD",
+    "result": "ERROR"
+  },
+  {
+    "timestamp": "2026-07-11 21:54",
+    "user": "demo_user",
+    "action": "Ask Catalyst [Groq Error]",
+    "target": "Show me all conflicts involving AI agent",
+    "environment": "PROD",
+    "result": "ERROR"
+  },
+  {
+    "timestamp": "2026-07-11 21:54",
+    "user": "demo_user",
+    "action": "Ask Catalyst [Groq Error]",
+    "target": "What agents trigger on SHIPMENT_PLANNED?",
+    "environment": "PROD",
+    "result": "ERROR"
+  },
+  {
+    "timestamp": "2026-07-11 21:54",
+    "user": "demo_user",
+    "action": "Ask Catalyst [Groq Error]",
+    "target": "Why did the Auto-Tender agent fail last ",
+    "environment": "PROD",
+    "result": "ERROR"
+  },
+  {
+    "timestamp": "2026-07-11 21:53",
+    "user": "demo_user",
+    "action": "Ask Catalyst [Error]",
+    "target": "Compare PROD and TEST versions of AG-SHI",
+    "environment": "PROD",
+    "result": "ERROR"
+  },
+  {
+    "timestamp": "2026-07-11 21:53",
+    "user": "demo_user",
+    "action": "Ask Catalyst [Error]",
+    "target": "Show me all conflicts involving AI agent",
+    "environment": "PROD",
+    "result": "ERROR"
+  },
+  {
+    "timestamp": "2026-07-11 21:53",
+    "user": "demo_user",
+    "action": "Ask Catalyst [Error]",
+    "target": "What agents trigger on SHIPMENT_PLANNED?",
+    "environment": "PROD",
+    "result": "ERROR"
+  },
+  {
+    "timestamp": "2026-07-11 21:53",
+    "user": "demo_user",
+    "action": "Ask Catalyst [Error]",
+    "target": "Why did the Auto-Tender agent fail last ",
+    "environment": "PROD",
+    "result": "ERROR"
+  },
+  {
+    "timestamp": "2026-07-11 21:52",
+    "user": "system",
+    "action": "Scan conflicts",
+    "target": "ConflictEngine",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 21:52",
+    "user": "system",
+    "action": "Scan conflicts",
+    "target": "ConflictEngine",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 21:52",
+    "user": "system",
+    "action": "Scan conflicts",
+    "target": "ConflictEngine",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 19:51",
+    "user": "demo_user",
+    "action": "Query LLM (Ask Catalyst) [Fallback]",
+    "target": "Why did the Auto-Tender agent fail last ",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 19:44",
+    "user": "demo_user",
+    "action": "Query LLM (Ask Catalyst) [Fallback]",
+    "target": "Compare PROD and TEST versions of AG-SHI",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 19:43",
+    "user": "demo_user",
+    "action": "Query LLM (Ask Catalyst) [Fallback]",
+    "target": "Show me all conflicts involving AI agent",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 19:43",
+    "user": "demo_user",
+    "action": "Query LLM (Ask Catalyst) [Fallback]",
+    "target": "What agents trigger on SHIPMENT_PLANNED?",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 19:43",
+    "user": "demo_user",
+    "action": "Query LLM (Ask Catalyst) [Fallback]",
+    "target": "Why did the Auto-Tender agent fail last ",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 19:36",
+    "user": "system",
+    "action": "Scan conflicts",
+    "target": "ConflictEngine",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 19:36",
+    "user": "system",
+    "action": "Scan conflicts",
+    "target": "ConflictEngine",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 19:36",
+    "user": "system",
+    "action": "Scan conflicts",
+    "target": "ConflictEngine",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 19:36",
+    "user": "system",
+    "action": "Rerun trace",
+    "target": "Shipment run RUN-48213",
+    "environment": "PROD",
+    "result": "FAILED"
+  },
+  {
+    "timestamp": "2026-07-11 19:35",
+    "user": "system",
+    "action": "Trigger batch run",
+    "target": "Dwell Prediction Model Refresh",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 19:35",
+    "user": "demo_user",
+    "action": "Query LLM (Ask Catalyst) [Fallback]",
+    "target": "Show me all conflicts involving AI agent",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 19:34",
+    "user": "system",
+    "action": "Scan conflicts",
+    "target": "ConflictEngine",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 19:34",
+    "user": "demo_user",
+    "action": "Query LLM (Ask Catalyst) [Fallback]",
+    "target": "Show me all conflicts involving AI agent",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  },
+  {
+    "timestamp": "2026-07-11 19:33",
+    "user": "system",
+    "action": "Scan conflicts",
+    "target": "ConflictEngine",
+    "environment": "PROD",
+    "result": "SUCCESS"
+  }
+]
