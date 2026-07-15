@@ -516,6 +516,14 @@ def promote_agent(agent_id: int, payload: DraftPayload, db: Session = Depends(ge
     agent.definition = payload.draft
     db.commit()
     
+    # Rebuild vector index dynamically so that semantic search stays in sync
+    try:
+        from app.services import embeddings
+        embeddings.rebuild_index(db)
+    except Exception as e:
+        import logging
+        logging.error(f"Failed to rebuild vector index during agent promotion: {e}")
+        
     write_audit_log("demo_user", "Promote agent to PROD", agent.agent_gid, "PROD", "SUCCESS")
     update_job_activity("Nightly Tender Sweep")
     

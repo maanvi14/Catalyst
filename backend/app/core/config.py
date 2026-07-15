@@ -14,6 +14,7 @@ class Settings(BaseSettings):
     fixture_dir: str = "fixtures/nwl-26b"
     auto_load_fixtures: bool = True
     groq_api_key: str = Field(default="")
+    enable_semantic_rag: bool = True
 
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore")
 

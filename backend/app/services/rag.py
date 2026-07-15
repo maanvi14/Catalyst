@@ -1,3 +1,21 @@
+"""
+Hybrid Scoring Retrieval Service
+-----------------------------
+This service implements a hybrid search retriever that combines lexical keyword scoring 
+and semantic vector search to improve context retrieval for the RAG pipeline.
+
+Key Concepts:
+1. Lexical (Keyword) Scorer: Uses token-overlap matching and exact phrase bonuses. 
+   Excellent for precise match identifiers (e.g. agent GIDs like 'NWL.AUTO_TENDER_CARRIER').
+2. Semantic (Vector) Scorer: Uses SentenceTransformer ('all-MiniLM-L6-v2') embeddings 
+   stored in a persistent local ChromaDB collection. Captures contextual and conceptual relevance.
+3. Score Merging: Both keyword scores and semantic similarity scores (derived from cosine distance) 
+   are normalized to a [0, 1] range using min-max scaling. They are then linearly combined:
+   final_score = 0.5 * keyword_norm + 0.5 * semantic_norm.
+4. Robust Fallback: Wrapped in error handling so that if ChromaDB or sentence-transformers fail 
+   to load (e.g. due to Render free tier memory limits), it logs a warning and falls back to pure 
+   lexical scoring without breaking the endpoint.
+"""
 import os
 import json
 import re
@@ -66,9 +84,9 @@ def get_all_documents(db: Session) -> list[dict]:
 
 def retrieve_context(query: str, db: Session, top_k: int = 5) -> tuple[str, list[str]]:
     """
-    Keyword-based retrieval — no LLM embeddings required.
-    Scores documents by how many query tokens appear in their text.
-    Groq handles the understanding step; retrieval just needs to surface relevant chunks.
+    Hybrid retrieval combining keyword-based overlap and semantic search.
+    Scores are normalized to [0, 1] and merged equally:
+    final_score = 0.5 * keyword_norm + 0.5 * semantic_norm
     """
     docs = get_all_documents(db)
     if not docs:
@@ -83,6 +101,7 @@ def retrieve_context(query: str, db: Session, top_k: int = 5) -> tuple[str, list
     }
     query_tokens = [w for w in query_clean.split() if (len(w) >= 3 or w == "ai") and w not in stopwords]
 
+    # 1. Run the existing keyword scorer (exactly as-is)
     scores: list[tuple[float, dict]] = []
     for doc in docs:
         text_lower = doc["text"].lower()
@@ -103,12 +122,69 @@ def retrieve_context(query: str, db: Session, top_k: int = 5) -> tuple[str, list
             score += 5
         scores.append((score, doc))
 
-    scores.sort(key=lambda x: x[0], reverse=True)
-    top_docs = [item[1] for item in scores[:top_k] if item[0] > 0]
+    # 2. Run semantic search if enabled in config
+    enable_semantic = False
+    try:
+        from app.core.config import settings
+        enable_semantic = settings.enable_semantic_rag
+    except Exception:
+        pass
+
+    semantic_scores = {}
+    if enable_semantic:
+        try:
+            from app.services.embeddings import semantic_search
+            # Retrieve semantic similarity scores for all documents to normalize them properly
+            results = semantic_search(query, top_k=len(docs))
+            semantic_scores = {doc_id: sim_score for doc_id, sim_score in results}
+        except Exception as e:
+            import logging
+            logging.warning(f"Semantic search failed, falling back to keyword scoring: {e}")
+            enable_semantic = False
+
+    # 3. Merge scores by normalizing them to 0-1
+    final_scores: list[tuple[float, dict]] = []
+    if enable_semantic and semantic_scores:
+        # Min-max normalization for keyword scores
+        keyword_raw_vals = [s[0] for s in scores]
+        min_keyword = min(keyword_raw_vals) if keyword_raw_vals else 0.0
+        max_keyword = max(keyword_raw_vals) if keyword_raw_vals else 0.0
+        keyword_range = max_keyword - min_keyword
+
+        # Min-max normalization for semantic scores
+        sem_raw_vals = [semantic_scores.get(doc["id"], 0.0) for doc in docs]
+        min_semantic = min(sem_raw_vals) if sem_raw_vals else 0.0
+        max_semantic = max(sem_raw_vals) if sem_raw_vals else 0.0
+        semantic_range = max_semantic - min_semantic
+
+        for score, doc in scores:
+            doc_id = doc["id"]
+            
+            # Normalize keyword score to 0-1
+            if keyword_range > 0:
+                keyword_norm = (score - min_keyword) / keyword_range
+            else:
+                keyword_norm = 0.0
+                
+            # Normalize semantic score to 0-1
+            sem_score = semantic_scores.get(doc_id, 0.0)
+            if semantic_range > 0:
+                semantic_norm = (sem_score - min_semantic) / semantic_range
+            else:
+                semantic_norm = 0.0
+                
+            final_score = 0.5 * keyword_norm + 0.5 * semantic_norm
+            final_scores.append((final_score, doc))
+    else:
+        # Fall back to pure keyword scores (if semantic search is disabled or failed)
+        final_scores = scores
+
+    final_scores.sort(key=lambda x: x[0], reverse=True)
+    top_docs = [item[1] for item in final_scores[:top_k] if item[0] > 0]
 
     # Always include at least some context even if no strong match
     if not top_docs:
-        top_docs = [item[1] for item in scores[:top_k]]
+        top_docs = [item[1] for item in final_scores[:top_k]]
 
     context_parts = []
     citations = []

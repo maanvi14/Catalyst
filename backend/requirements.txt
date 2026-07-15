@@ -7,3 +7,5 @@ pydantic-settings==2.10.1
 networkx==3.5
 numpy>=1.24.0
 python-multipart==0.0.20
+sentence-transformers
+chromadb
